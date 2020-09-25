@@ -1,6 +1,6 @@
 import React from 'react';
 import './Booking.css';
-import { Card, Form, Button } from 'react-bootstrap';
+import { Card, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
 
@@ -42,19 +42,17 @@ const Booking = () => {
                         <Form.Control className="bg-light custom-input-2" type="destination" placeholder="destination" />
                     </Form.Group>
 
-               
-                <div className="d-flex justify-content-around">
-                    <label for="">From</label>
-                    <label for="">To</label>
-                </div>
-                <div className="d-flex justify-content-around">
-                    <input className="bg-light form-control mr-1" type="date" name="" id="" required></input>
-                    <input className="bg-light form-control mr-1" type="date" name="" id="" required></input>
-                </div>
-                <br/>
-                <Button onClick={handleBookDetails} variant="primary" type="submit">
-                    Start Booking
-                </Button>
+
+                    <div className="d-flex justify-content-around">
+                        <label for="">From</label>
+                        <label for="">To</label>
+                    </div>
+                    <div className="d-flex justify-content-around">
+                        <input className="bg-light form-control mr-1" type="date" name="" id="" required></input>
+                        <input className="bg-light form-control mr-1" type="date" name="" id="" required></input>
+                    </div>
+                    <br />
+                    <input type="submit" value="Start Booking" onClick={handleBookDetails} className="btn btn-warning btn-lg btn-block"/>
                 </Form>
             </div>
 

@@ -12,6 +12,7 @@ import Booking from './components/Booking/Booking';
 import BookingDetails from './components/BookingDetails/BookingDetails';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Header from './components/Header/Header';
 
 export const UserContext = createContext();
 
@@ -21,8 +22,9 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-        <p>Name: {loggedInUser.name}</p>
+        <p> {loggedInUser.name}</p>
     <Router>
+      <Header></Header>
        <Switch>
           <Route exact path="/">
             <FrontPage></FrontPage>
